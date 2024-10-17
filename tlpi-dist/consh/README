@@ -1,0 +1,17 @@
+Example usage:
+
+    $ mkdir demo
+    $ cd demo
+    $ ../create_lowerfs.sh lower
+    $ ../consh_setup.sh -c consh_cgrp lower .
+    / #
+
+The networking set-up can then be done from a shell outside the container:
+
+    $ ./consh_nw_setup.sh $(pidof busybox) consh 10.0.0.1/24 10.0.0.2/24
+
+After exiting the container shell, you can clean-up with the following script:
+
+    $ ./consh_cleanup.sh -c consh_cgrp demo
+
+    ('demo' is the directory that was created when setting up the container.)
