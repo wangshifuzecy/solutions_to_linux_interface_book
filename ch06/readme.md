@@ -6,7 +6,7 @@ Compile the program in Listing 6-1 (mem_segments.c), and list its size using ls 
 wsf@~/code/linux/interface_book/proc$ ls -l mem_segments
 -rwxrwxr-x 1 wsf wsf 16256 Sep 30 08:28 mem_segments
 ```
-In mem_segments.c's main function:
+In [mem_segments.c](./mem_segments.c)'s main function:
 ```c
 int
 main(int argc, char *argv[])    /* Allocated in frame for main() */
@@ -28,8 +28,9 @@ The uninitialized data segment is known as the BSS segment(Block Started by Symb
 
 # 6-2
 Write a program to see what happens if we try to longjmp() into a function that has already returned.
+
 ## answer
-See in 2_loogjmp.c:
+See in [2_loogjmp.c](./2_loogjmp.c)
 ```c
 #include <stdio.h>
 #include <setjmp.h>
@@ -73,4 +74,4 @@ After loogjmp() into a function that has already returned, the program meet one 
 # 6-3
 Implement setenv() and unsetenv() using getenv(), putenv(), and, where necessary, code that directly modifies environ. Your version of unsetenv() should check to see whether there are multiple definitions of an environment variable, and remove them all (which is what the glibc version of unsetenv() does).
 ## answer
-see in 3_env.c
+see code in [3_env.c](./3_env.c)

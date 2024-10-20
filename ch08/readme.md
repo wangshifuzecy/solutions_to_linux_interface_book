@@ -16,4 +16,4 @@ Implement getpwnam() using setpwent(), getpwent(), and endpwent().
 
 ## answer
 
-see code in `getpwnam.c`
+see code in [getpwnam.c](./getpwnam.c)

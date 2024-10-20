@@ -2,7 +2,7 @@
 Try running the program in Listing 11-1 on other UNIX implementations if you have access to them
 
 ## answer
-Not yet completed
+Not yet completed (I only have Linux)
 
 # 11-2
 Try running the program in Listing 11-2 on other file systems.

@@ -107,5 +107,5 @@ rm -rf file prog dir
 Write a simple version of the `chattr(1)` command, which modifies file i-node flags. See the `chattr(1)` man page for details of the `chattr` command-line interface. (You don’t need to implement the `–R`, `–V`, and `–v` options.)
 
 ## Answer
-see `7_chattr.c` (I don't implement any option.)
+See code in [7_chattr.c](./7_chattr.c) (I don't implement any option.)
 You can use `lsattr` to check.

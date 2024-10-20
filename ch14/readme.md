@@ -10,10 +10,10 @@ TODO:
 - What's the reason of different time used in different file system?
 - What's the order of entreies returned by `readdir()` in different file system?
 
-see `test_random.c` for creating and removing files. (I don't add any options for gcc except specifying the name.)
+see code in [test_random.c](./test_random.c) for creating and removing files. (I don't add any options for gcc except specifying the name.)
 Usage: `./test_random <number_of_files> <directory>`
 
-see `test.sh` for compare in different size and file system type. (you should modify the var `dirs` considering your mount points).
+[test.sh](./test.sh) for compare in different size and file system type. (you should modify the var `dirs` considering your mount points).
 ```
 Usage: ./test.sh [-d] [-n]
 options:
@@ -53,7 +53,7 @@ Here's the data you provided formatted into a Markdown table for better readabil
 - The time to create files increases as the number file increase, but the time to delete files have ups and downs.
 - XFS system have the minimum time to delete files when NF is smaller. 
 
-`test_random.c` create files with random names, `test_increment.c` creat file with increasing number.
+[test_random.c](./test_random.c) create files with random names, [test_increment.c](./test_increment.c) creat file with increasing number.
 running `./test_increment` instead `./test_random`, `test.sh` get:
 
 | Directory   | Number of Files | Create Time (s) | Delete Time (s) | Total Time (s) |

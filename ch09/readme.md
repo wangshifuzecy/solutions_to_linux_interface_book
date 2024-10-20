@@ -21,7 +21,7 @@ e) setresuid(–1, 2000, 3000);
 | `setfsuid(2000)`            | 1000     | 0             | 0         | 2000            |
 | `setresuid(-1, 2000, 3000)` | 1000     | 2000          | 3000      | 2000            |
 
-You can practice it by compiling and running `1_setuid.c` with `sudo `(input one char from a to e which is related to one function call).
+You can practice it by compiling and running [1_setuid.c](./1_setuid.c) with `sudo `(input one char from a to e which is related to one function call).
 
 notes:
 ![alt text](image.png)
@@ -80,7 +80,7 @@ setresuid(getuid(), getuid(), getuid()); /* Permanently drop privileges */
 - In `setreuid` and `setregid`: If `r` (real user or group ID) is not `-1`, or `e` (effective user or group ID) is changed from its current value, both the effective ID and saved set-user-ID or saved set-group-ID are updated to the new effective ID.(SUSv3 no specify)
 
 
-Implementation code in `4_set.c`, you can modify the function calls of suspension, resuming and dropping
+Implementation code in [4_set.c](./4_set.c), you can modify the function calls of suspension, resuming and dropping
 
 run it with following command, 1000 is uid which start the program and 1001 is uid of another user.
 ```

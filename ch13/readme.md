@@ -30,7 +30,7 @@ gcc -I ../lib -DBUF_SIZE=4096 -o ./copy_sync_4096 copy_sync.c ../libtlpi.a
 ```
 
 (a)
-see `1_a.sh`, using `date +%s.%N` measure really time (it's not reliable but using `time` is not precise considering the file is small and `time` is accurate only to three decimal places.)
+[1_a.sh](./1_a.sh) uses `date +%s.%N` measure really time (it's not reliable but using `time` is not precise considering the file is small and `time` is accurate only to three decimal places.)
 ```
 Executable      File            Avg Real (seconds)  
 ----------      -----           ---------------------
@@ -57,7 +57,7 @@ Executable      File            Avg Real (seconds)
 ```
 
 (b)
-see `1_b.sh`. Time become much longer.
+[1_b.sh](./1_b.sh) Time become much longer.
 ```
 Executable      File            Avg Real (seconds)  
 ----------      -----           ---------------------
@@ -78,7 +78,7 @@ Executable      File            Avg Real (seconds)
 ```
 
 (c)
-see `1_c.sh`
+[1_c.sh](./1_c.sh)
 ```
 Executable      File            Avg Real (seconds)   Filesystem
 ----------      -----           --------------------- ----------
@@ -181,11 +181,11 @@ Executable      File            Avg Real (seconds)   Filesystem
 Time the operation of the `filebuff/write_bytes.c` program (provided in the source code distribution for this book) for various buffer sizes and file systems.  
 
 ## Answer
-`write_bytes` is getting from `../tlpi-dist/filebuff`.
+`write_bytes` is getting from [../tlpi-dist/filebuff](../tlpi-dist/filebuff/write_bytes.c).
 Usage:
 `./write_bytes file num-bytes buf-size`
 
-Timer code see `2_time.sh` (you should check the location of `write_bytes` and modify the `file_system` var), testing on create one 100MB file.
+Timer code see [2_time.sh](./2_time.sh) (you should check the location of `write_bytes` and modify the `file_system` var), testing on create one 100MB file.
 
 ```
 File System     Buffer Size Avg Real   Avg User   Avg Sys
@@ -249,7 +249,7 @@ When outputing to the terminal, `printf` will flush the output when it encounter
 
 When redirecting output to a file, `printf` doesn't flush the output immediately. The buffered data stay in memory until the buffer is full or the the program exits (in this case, after the `write()` call). The `write()` write without any buffering, so it output appears immediately in the file. So in the end, the output file's first line is the string of write's argument, followed by the argument of `printf`.
 
-See `../tlpi_dist/filebuff/mix23_linebuff.c`
+See [../tlpi_dist/filebuff/mix23_linebuff.c](../tlpi-dist//filebuff/mix23_linebuff.c)
 
 result:
 ```
@@ -266,4 +266,4 @@ If I had more time,
 The command `tail [ –n num ] file` prints the last `num` lines (ten by default) of the named file. Implement this command using I/O system calls (`lseek()`, `read()`, `write()`, and so on). Keep in mind the buffering issues described in this chapter, in order to make the implementation efficient.  
 
 ## Answer
-see `5_tail.c`
+see [5_tail.c](./5_tail.c)

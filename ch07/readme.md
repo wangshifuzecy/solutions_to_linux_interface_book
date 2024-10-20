@@ -133,7 +133,7 @@ TODO: explain the more detailed allcation on heap.
 (Advanced) Implement malloc() and free().
 
 ## answer
-see `malloc_and_free.c`
+see [malloc_and_free.c](./malloc_and_free.c)
 
 - `my_malloc(size_t size)` 
     1. scan list for searching suitable free block. If find one, resize it (If the size is big enough, split it into two blocks) 
